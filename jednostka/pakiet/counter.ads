@@ -4,4 +4,8 @@ package Counter is
 
    function Get return Natural;
 
+private
+
+   Counter : Natural := 0;
+
 end Counter;

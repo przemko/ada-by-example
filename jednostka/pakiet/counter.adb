@@ -1,7 +1,5 @@
 package body Counter is
 
-   Counter : Natural := 0;
-
    procedure Increment is
    begin
       Counter := Counter + 1;
