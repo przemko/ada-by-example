@@ -1,2 +1,2 @@
-# ada-examples
+# ada-by-example
 Ada w przykładach.
