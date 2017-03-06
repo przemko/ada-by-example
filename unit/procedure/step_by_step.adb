@@ -24,7 +24,7 @@ begin
       Kahan_Sum (1.0 / Float (I * I), Sum, Comp);
    end loop;
    Put (" Kahan  = ");
-   Put (Sum, 20, 10, 0);
+   Put (Sum, 1, 10, 0);
    New_Line;
 
    Sum := 0.0;
@@ -32,7 +32,7 @@ begin
       Sum := Sum + 1.0 / Float (I * I);
    end loop;
    Put ("Forward = ");
-   Put (Sum, 20, 10, 0);
+   Put (Sum, 1, 10, 0);
    New_Line;
 
    Sum := 0.0;
@@ -40,7 +40,7 @@ begin
       Sum := Sum + 1.0 / Float (I * I);
    end loop;
    Put ("Reverse = ");
-   Put (Sum, 20, 10, 0);
+   Put (Sum, 1, 10, 0);
    New_Line;
 
 end Step_By_Step;
