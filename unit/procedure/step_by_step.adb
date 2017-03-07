@@ -23,7 +23,7 @@ begin
    for I in 1 .. 10000 loop
       Kahan_Sum (1.0 / Float (I * I), Sum, Comp);
    end loop;
-   Put (" Kahan  = ");
+   Put ("  Kahan = ");
    Put (Sum, 1, 10, 0);
    New_Line;
 
