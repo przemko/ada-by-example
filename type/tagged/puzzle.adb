@@ -12,8 +12,11 @@ package body Puzzle is
       return Tree;
    end Build_Expression;
 
-   procedure Print_Expression (Tree : in Expr_Ptr) is
-
+      procedure Print (E : Expression) is
+      begin
+				null;
+      end Print;
+      
       procedure Print (L : Literal) is
       begin
          Put (Integer'Image (L.Value));
@@ -54,6 +57,8 @@ package body Puzzle is
          Print_Expression(D.Right);
          Put (")");
       end Print;
+      
+   procedure Print_Expression (Tree : in Expr_Ptr) is
 
    begin
       Print (Tree.all);
