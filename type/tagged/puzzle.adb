@@ -57,14 +57,8 @@ package body Puzzle is
    
    function Build_Expression (Args : in Numbers;
                               Value : in Integer) return Expr_Ptr is
-      Tree : Expr_Ptr :=
-        new Addition' (
-                       Left => new Literal' (Value => 1),
-                       Right => new Multiplication' (
-                         Left => new Literal' (Value => 2),
-                         Right => new Literal' (Value => 3)));
    begin
-      return Tree;
+      return null;
    end Build_Expression;
 
 end Puzzle;

@@ -2,5 +2,13 @@ with Puzzle; use Puzzle;
 
 procedure Main is
 begin
-   Print_Expression (Build_Expression ((1, 2, 3, 4), 10));
+   Print_Expression 
+     (
+      new Multiplication' 
+	(
+	 new Literal' (Value => 2),
+	 new Addition'
+	   (
+	    new Literal' (Value => 3),
+	    new Literal' (Value => 1))));
 end Main;
