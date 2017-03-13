@@ -2,16 +2,14 @@ package Puzzle is
 
    type Expression is tagged null record;
 
-	procedure Print (E : Expression);
+   procedure Print (E : Expression);
 	
    type Literal is new Expression with
       record
-         Value : Integer;
+         Value : Natural;
       end record;
 
-   overriding
-   
-   procedure Print (L : Literal);
+   overriding procedure Print (L : Literal);
 
    type Expr_Ptr is access all Expression'Class;
 
@@ -22,29 +20,21 @@ package Puzzle is
 
    type Addition is new Binary_Operation with null record;
    
-   Overriding
-
-     procedure Print (A : Addition);
+   overriding procedure Print (A : Addition);
 
    type Subtraction is new Binary_Operation with null record;
 
-   Overriding
-
-     procedure Print (S : Subtraction);
+   overriding procedure Print (S : Subtraction);
 
    type Multiplication is new Binary_Operation with null record;
 
-   Overriding
-
-     procedure Print (M : Multiplication);
+   overriding procedure Print (M : Multiplication);
 
    type Division is new Binary_Operation with null record;
 
-   Overriding
+   overriding procedure Print (D : Division);
 
-     procedure Print (D : Division);
-
-   type Numbers is array (Positive range <>) of Integer;
+   type Numbers is array (Positive range <>) of Natural;
 
    function Build_Expression (Args : in Numbers;
                               Value : in Integer) return Expr_Ptr;
