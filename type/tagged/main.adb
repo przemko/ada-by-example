@@ -1,14 +1,11 @@
-with Puzzle; use Puzzle;
+with Expressions; use Expressions;
 
 procedure Main is
 begin
    Print_Expression 
-     (
-      new Multiplication' 
-	(
-	 new Literal' (Value => 2),
-	 new Addition'
-	   (
-	    new Literal' (Value => 3),
-	    new Literal' (Value => 1))));
+     (new Multiplication'
+	(Left => new Literal' (Value => 2),
+	 Right => new Addition'
+	   (Left => new Literal' (Value => 1),
+	    Right => new Literal' (Value => 3))));
 end Main;
