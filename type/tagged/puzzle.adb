@@ -6,7 +6,7 @@ package body Puzzle is
    begin
       null;
    end Print;
-      
+
    procedure Print (L : Literal) is
       S : String := Natural'Image (L.Value);
    begin
@@ -48,17 +48,23 @@ package body Puzzle is
       Print_Expression(D.Right);
       Put (")");
    end Print;
-   
+
    procedure Print_Expression (Tree : in Expr_Ptr) is
 
    begin
       Print (Tree.all);
    end Print_Expression;
-   
+
    function Build_Expression (Args : in Numbers;
                               Value : in Integer) return Expr_Ptr is
+
+      function Generate (Args : in Numbers) return Expr_Ptr is
+      begin
+         return null;
+      end Generate;
+
    begin
-      return null;
+      return Generate (Args);
    end Build_Expression;
 
 end Puzzle;
