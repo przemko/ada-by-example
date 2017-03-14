@@ -1,9 +1,9 @@
 package Expressions is
-   
+
    type Expression is tagged null record;
 
    procedure Print (E : Expression);
-	
+
    type Literal is new Expression with
       record
          Value : Natural;
@@ -19,7 +19,7 @@ package Expressions is
       end record;
 
    type Addition is new Binary_Operation with null record;
-   
+
    overriding procedure Print (A : Addition);
 
    type Subtraction is new Binary_Operation with null record;
