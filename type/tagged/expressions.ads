@@ -1,5 +1,5 @@
-package Puzzle is
-
+package Expressions is
+   
    type Expression is tagged null record;
 
    procedure Print (E : Expression);
@@ -34,11 +34,6 @@ package Puzzle is
 
    overriding procedure Print (D : Division);
 
-   type Numbers is array (Positive range <>) of Natural;
-
-   function Build_Expression (Args : in Numbers;
-                              Value : in Integer) return Expr_Ptr;
-
    procedure Print_Expression (Tree : in Expr_Ptr);
 
-end Puzzle;
+end Expressions;

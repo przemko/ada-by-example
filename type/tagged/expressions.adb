@@ -1,6 +1,6 @@
 with Ada.Text_IO; use Ada.Text_IO;
 
-package body Puzzle is
+package body Expressions is
 
    procedure Print (E : Expression) is
    begin
@@ -55,16 +55,4 @@ package body Puzzle is
       Print (Tree.all);
    end Print_Expression;
 
-   function Build_Expression (Args : in Numbers;
-                              Value : in Integer) return Expr_Ptr is
-
-      function Generate (Args : in Numbers) return Expr_Ptr is
-      begin
-         return null;
-      end Generate;
-
-   begin
-      return Generate (Args);
-   end Build_Expression;
-
-end Puzzle;
+end Expressions;
