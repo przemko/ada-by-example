@@ -5,7 +5,7 @@ procedure Naive is
 
    N : Integer := 0;
 
-   task type Up;
+   task Up;
 
    task body Up is
    begin
@@ -14,7 +14,7 @@ procedure Naive is
       end loop;
    end Up;
 
-   task type Down;
+   task Down;
 
    task body Down is
    begin
@@ -22,9 +22,6 @@ procedure Naive is
          N := N - 1;
       end loop;
    end Down;
-
-   T1 : Up;
-   T2 : Down;
 
 begin
    delay 2.0;

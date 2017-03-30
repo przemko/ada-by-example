@@ -39,7 +39,7 @@ procedure Correct is
 
    C : Counter;
 
-   task type Up;
+   task Up;
 
    task body Up is
    begin
@@ -48,7 +48,7 @@ procedure Correct is
       end loop;
    end Up;
 
-   task type Down;
+   task Down;
 
    task body Down is
    begin
@@ -56,9 +56,6 @@ procedure Correct is
          C.Decrement;
       end loop;
    end Down;
-
-   T1 : Up;
-   T2 : Down;
 
 begin
    delay 2.0;
